@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <title>Weekler</title>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <img src="images/flowers.svg" class="img-flowers">
+            <div class="dropdown" style=" position: absolute; top: 30px; left: 30px;">
+                <button class="btn btn-logo btn-outline-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="images/logo.png" class="img-fluid">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="main.html">Еженедельник</a>
+                    <a class="dropdown-item" href="note.html">Важное</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" data-toggle="modal" data-target="#OutModalCenter">Выход</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            
+            <div class = "main-card" style="position: absolute; left: 30px ;top: 100px;">
+                <div class="card-blank" >
+                    <div class="card-body text-center" style="width: 1250px; height: 500px">
+                        <div class="card-day" style="left: 15px">
+                            <div class="card-header text-dark">
+                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#ModalCenter">
+                                    Понедельник
+                                </button>
+                            </div>
+                            <p class="card-text">
+                                <ul class="list-group">
+                                    <li class="list-group-item text-main">Выгулять собаку</li>
+                                    <li class="list-group-item text-main">Отправить отчет</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="card-day" style="left: 190px">
+                            <div class="card-header text-light">
+                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#ModalCenter">
+                                    Вторник
+                                </button>
+                            </div>
+                            <p class="card-text">
+                                <ul class="list-group">
+                                    <li class="list-group-item text-main">Сходить в магазин</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="card-day" style="left: 365px">
+                            <div class="card-header text-light">
+                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#ModalCenter">
+                                    Среда
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-day" style="left: 540px">
+                            <div class="card-header text-light">
+                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#ModalCenter">
+                                    Четверг
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-day" style="left: 715px">
+                            <div class="card-header text-light">
+                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#ModalCenter">
+                                    Пятница
+                                </button>
+                            </div>
+                            <p class="card-text">
+                                <ul class="list-group">
+                                    <li class="list-group-item text-main">Сделать лабу</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="card-day" style="left: 890px">
+                            <div class="card-header text-light">
+                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#ModalCenter">
+                                    Суббота
+                                </button>
+                            </div>
+                            <p class="card-text">
+                                <ul class="list-group">
+                                    <li class="list-group-item text-main">Полить цветы</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="card-day" style="left: 1065px">
+                            <div class="card-header text-light">
+                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#ModalCenter">
+                                    Воскресенье
+                                </button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="OutModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-main" id="ModalLongTitle">Вы уверены, что хотите выйти?</h5>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="index.html" class="btn btn-dark">Выйти</a>
+                      <button type="button" class="btn btn-dark"data-dismiss="modal"> Остаться</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-main" id="ModalLongTitle">Задача</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="recipient-name"placeholder="Название">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message-text">Комментарий</textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-dark" data-dismiss="modal">Назад</button>
+                      <button type="button" class="btn btn-dark">Добавить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </body>
+</html>
